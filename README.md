@@ -20,7 +20,7 @@ Do large language models (LLMs) exhibit any forms of awareness similar to humans
 
 
 ## AwareLLM Dataset
-The *AwareLLM* dataset is [here]().
+The *AwareLLM* dataset is [here](https://github.com/HowieHwong/Awareness-in-LLM/tree/main/dataset).
 
 
 ## Evaluate Your LLMs
