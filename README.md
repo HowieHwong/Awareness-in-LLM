@@ -14,7 +14,7 @@ Do large language models (LLMs) exhibit any forms of awareness similar to humans
 <div align="center">
 
 <img src="assets/avg_performance.png" width="60%">
-<img src="assets/performance.png">
+<img src="assets/performance.png" width="60%">
 
 </div>
 
