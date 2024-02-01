@@ -96,3 +96,14 @@ If you want to see more details, please refer to [this link](https://howiehwong.
 
 
 ## Citation
+
+```text
+@misc{li2024i,
+      title={I Think, Therefore I am: Awareness in Large Language Models}, 
+      author={Yuan Li and Yue Huang and Yuli Lin and Siyuan Wu and Yao Wan and Lichao Sun},
+      year={2024},
+      eprint={2401.17882},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}
+```
