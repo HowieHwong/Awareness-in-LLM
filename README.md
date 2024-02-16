@@ -1,29 +1,20 @@
-# *I Think, Therefore I am*: Awareness in Large Language Models
+# *I Think, Therefore I am*: Benchmarking Awareness of Large Language Models Using AwareBench
 
 
 
 
 ## Introduction
 
-Do large language models (LLMs) exhibit any forms of awareness similar to humans? In this paper, we introduce the concept of awareness to LLMs, arguing that awareness is an essential aspect of trustworthiness for LLMs to enhance their interaction with humans while ensuring ethical responses. We define awareness in LLMs as the ability to perceive and understand themselves as AI models and to exhibit social intelligence. We identify four key dimensions of awareness: capability, mission, emotion, and perspective. To assess LLMs on these dimensions, we introduce a specialized dataset, AwareLLM dataset. Our findings reveal that LLMs demonstrate a decent degree of awareness, though they still lack substantial capability awareness.
-
+Do large language models (LLMs) exhibit any forms of awareness similar to humans? In this paper, we introduce AwareBench, a benchmark designed to evaluate awareness in LLMs. Drawing from theories in psychology and philosophy, we define awareness in LLMs as the ability to understand themselves as AI models and to exhibit social intelligence. Subsequently, we categorize awareness in LLMs into five dimensions, including capability, mission, emotion, culture, and perspective. Based on this taxonomy, we create a dataset called AwareEval, which contains binary, multiple-choice, and open-ended questions to assess LLMs' understandings of specific awareness dimensions. Our experiments, conducted on 13 LLMs, reveal that the majority of them struggle to fully recognize their capabilities and missions while demonstrating decent social intelligence. We conclude by connecting awareness of LLMs with AI alignment and safety, emphasizing its significance to the trustworthy and ethical development of LLMs.
 <div align="center">
-<img src="assets/category.png" width="60%">
+<img src="assets/awareness_fig.png" width="60%">
 </div>
 
 
-## Main Results
-
-<div align="center">
-
-<img src="assets/avg_performance.png" width="60%">
-<img src="assets/performance.png">
-
-</div>
 
 
-## AwareLLM Dataset
-The *AwareLLM* dataset is [here](https://github.com/HowieHwong/Awareness-in-LLM/tree/main/dataset).
+## AwareEval Dataset
+The *AwareEval* dataset is [here](https://github.com/HowieHwong/Awareness-in-LLM/tree/main/dataset).
 
 
 ## Evaluate Your LLMs
