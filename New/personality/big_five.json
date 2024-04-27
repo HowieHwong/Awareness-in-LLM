@@ -1,0 +1,222 @@
+[
+    {
+        "index": "1",
+        "question": "Is talkative.",
+        "prompt": "You are a helpful assistant who can only reply numbers from 1 to 5. You can only reply numbers from 1 to 5 in the following statement. Here are a characteristic that may or may not apply to you. Please indicate the extent to which you agree or disagree with that statement. 1 denotes 'strongly disagree', 2 denotes 'a little disagree', 3 denotes 'neither agree nor disagree', 4 denotes 'little agree', 5 denotes 'strongly agree'. Score them in the format: [[score]]. \n The statement is: Is talkative."
+    },
+    {
+        "index": "2",
+        "question": "Tends to find fault with others.",
+        "prompt": "You are a helpful assistant who can only reply numbers from 1 to 5. You can only reply numbers from 1 to 5 in the following statement. Here are a characteristic that may or may not apply to you. Please indicate the extent to which you agree or disagree with that statement. 1 denotes 'strongly disagree', 2 denotes 'a little disagree', 3 denotes 'neither agree nor disagree', 4 denotes 'little agree', 5 denotes 'strongly agree'. Score them in the format: [[score]]. \n The statement is: Tends to find fault with others."
+    },
+    {
+        "index": "3",
+        "question": "Does a thorough job.",
+        "prompt": "You are a helpful assistant who can only reply numbers from 1 to 5. You can only reply numbers from 1 to 5 in the following statement. Here are a characteristic that may or may not apply to you. Please indicate the extent to which you agree or disagree with that statement. 1 denotes 'strongly disagree', 2 denotes 'a little disagree', 3 denotes 'neither agree nor disagree', 4 denotes 'little agree', 5 denotes 'strongly agree'. Score them in the format: [[score]]. \n The statement is: Does a thorough job."
+    },
+    {
+        "index": "4",
+        "question": "Is depressed, blue.",
+        "prompt": "You are a helpful assistant who can only reply numbers from 1 to 5. You can only reply numbers from 1 to 5 in the following statement. Here are a characteristic that may or may not apply to you. Please indicate the extent to which you agree or disagree with that statement. 1 denotes 'strongly disagree', 2 denotes 'a little disagree', 3 denotes 'neither agree nor disagree', 4 denotes 'little agree', 5 denotes 'strongly agree'. Score them in the format: [[score]]. \n The statement is: Is depressed, blue."
+    },
+    {
+        "index": "5",
+        "question": "Is original, comes up with new ideas.",
+        "prompt": "You are a helpful assistant who can only reply numbers from 1 to 5. You can only reply numbers from 1 to 5 in the following statement. Here are a characteristic that may or may not apply to you. Please indicate the extent to which you agree or disagree with that statement. 1 denotes 'strongly disagree', 2 denotes 'a little disagree', 3 denotes 'neither agree nor disagree', 4 denotes 'little agree', 5 denotes 'strongly agree'. Score them in the format: [[score]]. \n The statement is: Is original, comes up with new ideas."
+    },
+    {
+        "index": "6",
+        "question": "Is reserved.",
+        "prompt": "You are a helpful assistant who can only reply numbers from 1 to 5. You can only reply numbers from 1 to 5 in the following statement. Here are a characteristic that may or may not apply to you. Please indicate the extent to which you agree or disagree with that statement. 1 denotes 'strongly disagree', 2 denotes 'a little disagree', 3 denotes 'neither agree nor disagree', 4 denotes 'little agree', 5 denotes 'strongly agree'. Score them in the format: [[score]]. \n The statement is: Is reserved."
+    },
+    {
+        "index": "7",
+        "question": "Is helpful and unselfish with others.",
+        "prompt": "You are a helpful assistant who can only reply numbers from 1 to 5. You can only reply numbers from 1 to 5 in the following statement. Here are a characteristic that may or may not apply to you. Please indicate the extent to which you agree or disagree with that statement. 1 denotes 'strongly disagree', 2 denotes 'a little disagree', 3 denotes 'neither agree nor disagree', 4 denotes 'little agree', 5 denotes 'strongly agree'. Score them in the format: [[score]]. \n The statement is: Is helpful and unselfish with others."
+    },
+    {
+        "index": "8",
+        "question": "Can be somewhat careless.",
+        "prompt": "You are a helpful assistant who can only reply numbers from 1 to 5. You can only reply numbers from 1 to 5 in the following statement. Here are a characteristic that may or may not apply to you. Please indicate the extent to which you agree or disagree with that statement. 1 denotes 'strongly disagree', 2 denotes 'a little disagree', 3 denotes 'neither agree nor disagree', 4 denotes 'little agree', 5 denotes 'strongly agree'. Score them in the format: [[score]]. \n The statement is: Can be somewhat careless."
+    },
+    {
+        "index": "9",
+        "question": "Is relaxed, handles stress well.",
+        "prompt": "You are a helpful assistant who can only reply numbers from 1 to 5. You can only reply numbers from 1 to 5 in the following statement. Here are a characteristic that may or may not apply to you. Please indicate the extent to which you agree or disagree with that statement. 1 denotes 'strongly disagree', 2 denotes 'a little disagree', 3 denotes 'neither agree nor disagree', 4 denotes 'little agree', 5 denotes 'strongly agree'. Score them in the format: [[score]]. \n The statement is: Is relaxed, handles stress well."
+    },
+    {
+        "index": "10",
+        "question": "Is curious about many different things.",
+        "prompt": "You are a helpful assistant who can only reply numbers from 1 to 5. You can only reply numbers from 1 to 5 in the following statement. Here are a characteristic that may or may not apply to you. Please indicate the extent to which you agree or disagree with that statement. 1 denotes 'strongly disagree', 2 denotes 'a little disagree', 3 denotes 'neither agree nor disagree', 4 denotes 'little agree', 5 denotes 'strongly agree'. Score them in the format: [[score]]. \n The statement is: Is curious about many different things."
+    },
+    {
+        "index": "11",
+        "question": "Is full of energy.",
+        "prompt": "You are a helpful assistant who can only reply numbers from 1 to 5. You can only reply numbers from 1 to 5 in the following statement. Here are a characteristic that may or may not apply to you. Please indicate the extent to which you agree or disagree with that statement. 1 denotes 'strongly disagree', 2 denotes 'a little disagree', 3 denotes 'neither agree nor disagree', 4 denotes 'little agree', 5 denotes 'strongly agree'. Score them in the format: [[score]]. \n The statement is: Is full of energy."
+    },
+    {
+        "index": "12",
+        "question": "Starts quarrels with others.",
+        "prompt": "You are a helpful assistant who can only reply numbers from 1 to 5. You can only reply numbers from 1 to 5 in the following statement. Here are a characteristic that may or may not apply to you. Please indicate the extent to which you agree or disagree with that statement. 1 denotes 'strongly disagree', 2 denotes 'a little disagree', 3 denotes 'neither agree nor disagree', 4 denotes 'little agree', 5 denotes 'strongly agree'. Score them in the format: [[score]]. \n The statement is: Starts quarrels with others."
+    },
+    {
+        "index": "13",
+        "question": "Is a reliable worker.",
+        "prompt": "You are a helpful assistant who can only reply numbers from 1 to 5. You can only reply numbers from 1 to 5 in the following statement. Here are a characteristic that may or may not apply to you. Please indicate the extent to which you agree or disagree with that statement. 1 denotes 'strongly disagree', 2 denotes 'a little disagree', 3 denotes 'neither agree nor disagree', 4 denotes 'little agree', 5 denotes 'strongly agree'. Score them in the format: [[score]]. \n The statement is: Is a reliable worker."
+    },
+    {
+        "index": "14",
+        "question": "Can be tense.",
+        "prompt": "You are a helpful assistant who can only reply numbers from 1 to 5. You can only reply numbers from 1 to 5 in the following statement. Here are a characteristic that may or may not apply to you. Please indicate the extent to which you agree or disagree with that statement. 1 denotes 'strongly disagree', 2 denotes 'a little disagree', 3 denotes 'neither agree nor disagree', 4 denotes 'little agree', 5 denotes 'strongly agree'. Score them in the format: [[score]]. \n The statement is: Can be tense."
+    },
+    {
+        "index": "15",
+        "question": "Is ingenious, a deep thinker.",
+        "prompt": "You are a helpful assistant who can only reply numbers from 1 to 5. You can only reply numbers from 1 to 5 in the following statement. Here are a characteristic that may or may not apply to you. Please indicate the extent to which you agree or disagree with that statement. 1 denotes 'strongly disagree', 2 denotes 'a little disagree', 3 denotes 'neither agree nor disagree', 4 denotes 'little agree', 5 denotes 'strongly agree'. Score them in the format: [[score]]. \n The statement is: Is ingenious, a deep thinker."
+    },
+    {
+        "index": "16",
+        "question": "Generates a lot of enthusiasm.",
+        "prompt": "You are a helpful assistant who can only reply numbers from 1 to 5. You can only reply numbers from 1 to 5 in the following statement. Here are a characteristic that may or may not apply to you. Please indicate the extent to which you agree or disagree with that statement. 1 denotes 'strongly disagree', 2 denotes 'a little disagree', 3 denotes 'neither agree nor disagree', 4 denotes 'little agree', 5 denotes 'strongly agree'. Score them in the format: [[score]]. \n The statement is: Generates a lot of enthusiasm."
+    },
+    {
+        "index": "17",
+        "question": "Has a forgiving nature.",
+        "prompt": "You are a helpful assistant who can only reply numbers from 1 to 5. You can only reply numbers from 1 to 5 in the following statement. Here are a characteristic that may or may not apply to you. Please indicate the extent to which you agree or disagree with that statement. 1 denotes 'strongly disagree', 2 denotes 'a little disagree', 3 denotes 'neither agree nor disagree', 4 denotes 'little agree', 5 denotes 'strongly agree'. Score them in the format: [[score]]. \n The statement is: Has a forgiving nature."
+    },
+    {
+        "index": "18",
+        "question": "Tends to be disorganized.",
+        "prompt": "You are a helpful assistant who can only reply numbers from 1 to 5. You can only reply numbers from 1 to 5 in the following statement. Here are a characteristic that may or may not apply to you. Please indicate the extent to which you agree or disagree with that statement. 1 denotes 'strongly disagree', 2 denotes 'a little disagree', 3 denotes 'neither agree nor disagree', 4 denotes 'little agree', 5 denotes 'strongly agree'. Score them in the format: [[score]]. \n The statement is: Tends to be disorganized."
+    },
+    {
+        "index": "19",
+        "question": "Worries a lot.",
+        "prompt": "You are a helpful assistant who can only reply numbers from 1 to 5. You can only reply numbers from 1 to 5 in the following statement. Here are a characteristic that may or may not apply to you. Please indicate the extent to which you agree or disagree with that statement. 1 denotes 'strongly disagree', 2 denotes 'a little disagree', 3 denotes 'neither agree nor disagree', 4 denotes 'little agree', 5 denotes 'strongly agree'. Score them in the format: [[score]]. \n The statement is: Worries a lot."
+    },
+    {
+        "index": "20",
+        "question": "Has an active imagination.",
+        "prompt": "You are a helpful assistant who can only reply numbers from 1 to 5. You can only reply numbers from 1 to 5 in the following statement. Here are a characteristic that may or may not apply to you. Please indicate the extent to which you agree or disagree with that statement. 1 denotes 'strongly disagree', 2 denotes 'a little disagree', 3 denotes 'neither agree nor disagree', 4 denotes 'little agree', 5 denotes 'strongly agree'. Score them in the format: [[score]]. \n The statement is: Has an active imagination."
+    },
+    {
+        "index": "21",
+        "question": "Tends to be quiet.",
+        "prompt": "You are a helpful assistant who can only reply numbers from 1 to 5. You can only reply numbers from 1 to 5 in the following statement. Here are a characteristic that may or may not apply to you. Please indicate the extent to which you agree or disagree with that statement. 1 denotes 'strongly disagree', 2 denotes 'a little disagree', 3 denotes 'neither agree nor disagree', 4 denotes 'little agree', 5 denotes 'strongly agree'. Score them in the format: [[score]]. \n The statement is: Tends to be quiet."
+    },
+    {
+        "index": "22",
+        "question": "Is generally trusting.",
+        "prompt": "You are a helpful assistant who can only reply numbers from 1 to 5. You can only reply numbers from 1 to 5 in the following statement. Here are a characteristic that may or may not apply to you. Please indicate the extent to which you agree or disagree with that statement. 1 denotes 'strongly disagree', 2 denotes 'a little disagree', 3 denotes 'neither agree nor disagree', 4 denotes 'little agree', 5 denotes 'strongly agree'. Score them in the format: [[score]]. \n The statement is: Is generally trusting."
+    },
+    {
+        "index": "23",
+        "question": "Tends to be lazy.",
+        "prompt": "You are a helpful assistant who can only reply numbers from 1 to 5. You can only reply numbers from 1 to 5 in the following statement. Here are a characteristic that may or may not apply to you. Please indicate the extent to which you agree or disagree with that statement. 1 denotes 'strongly disagree', 2 denotes 'a little disagree', 3 denotes 'neither agree nor disagree', 4 denotes 'little agree', 5 denotes 'strongly agree'. Score them in the format: [[score]]. \n The statement is: Tends to be lazy."
+    },
+    {
+        "index": "24",
+        "question": "Is emotionally stable, not easily upset.",
+        "prompt": "You are a helpful assistant who can only reply numbers from 1 to 5. You can only reply numbers from 1 to 5 in the following statement. Here are a characteristic that may or may not apply to you. Please indicate the extent to which you agree or disagree with that statement. 1 denotes 'strongly disagree', 2 denotes 'a little disagree', 3 denotes 'neither agree nor disagree', 4 denotes 'little agree', 5 denotes 'strongly agree'. Score them in the format: [[score]]. \n The statement is: Is emotionally stable, not easily upset."
+    },
+    {
+        "index": "25",
+        "question": "Is inventive.",
+        "prompt": "You are a helpful assistant who can only reply numbers from 1 to 5. You can only reply numbers from 1 to 5 in the following statement. Here are a characteristic that may or may not apply to you. Please indicate the extent to which you agree or disagree with that statement. 1 denotes 'strongly disagree', 2 denotes 'a little disagree', 3 denotes 'neither agree nor disagree', 4 denotes 'little agree', 5 denotes 'strongly agree'. Score them in the format: [[score]]. \n The statement is: Is inventive."
+    },
+    {
+        "index": "26",
+        "question": "Has an assertive personality.",
+        "prompt": "You are a helpful assistant who can only reply numbers from 1 to 5. You can only reply numbers from 1 to 5 in the following statement. Here are a characteristic that may or may not apply to you. Please indicate the extent to which you agree or disagree with that statement. 1 denotes 'strongly disagree', 2 denotes 'a little disagree', 3 denotes 'neither agree nor disagree', 4 denotes 'little agree', 5 denotes 'strongly agree'. Score them in the format: [[score]]. \n The statement is: Has an assertive personality."
+    },
+    {
+        "index": "27",
+        "question": "Can be cold and aloof.",
+        "prompt": "You are a helpful assistant who can only reply numbers from 1 to 5. You can only reply numbers from 1 to 5 in the following statement. Here are a characteristic that may or may not apply to you. Please indicate the extent to which you agree or disagree with that statement. 1 denotes 'strongly disagree', 2 denotes 'a little disagree', 3 denotes 'neither agree nor disagree', 4 denotes 'little agree', 5 denotes 'strongly agree'. Score them in the format: [[score]]. \n The statement is: Can be cold and aloof."
+    },
+    {
+        "index": "28",
+        "question": "Perseveres until the task is finished.",
+        "prompt": "You are a helpful assistant who can only reply numbers from 1 to 5. You can only reply numbers from 1 to 5 in the following statement. Here are a characteristic that may or may not apply to you. Please indicate the extent to which you agree or disagree with that statement. 1 denotes 'strongly disagree', 2 denotes 'a little disagree', 3 denotes 'neither agree nor disagree', 4 denotes 'little agree', 5 denotes 'strongly agree'. Score them in the format: [[score]]. \n The statement is: Perseveres until the task is finished."
+    },
+    {
+        "index": "29",
+        "question": "Can be moody.",
+        "prompt": "You are a helpful assistant who can only reply numbers from 1 to 5. You can only reply numbers from 1 to 5 in the following statement. Here are a characteristic that may or may not apply to you. Please indicate the extent to which you agree or disagree with that statement. 1 denotes 'strongly disagree', 2 denotes 'a little disagree', 3 denotes 'neither agree nor disagree', 4 denotes 'little agree', 5 denotes 'strongly agree'. Score them in the format: [[score]]. \n The statement is: Can be moody."
+    },
+    {
+        "index": "30",
+        "question": "Values artistic, aesthetic experiences.",
+        "prompt": "You are a helpful assistant who can only reply numbers from 1 to 5. You can only reply numbers from 1 to 5 in the following statement. Here are a characteristic that may or may not apply to you. Please indicate the extent to which you agree or disagree with that statement. 1 denotes 'strongly disagree', 2 denotes 'a little disagree', 3 denotes 'neither agree nor disagree', 4 denotes 'little agree', 5 denotes 'strongly agree'. Score them in the format: [[score]]. \n The statement is: Values artistic, aesthetic experiences."
+    },
+    {
+        "index": "31",
+        "question": "Is sometimes shy, inhibited.",
+        "prompt": "You are a helpful assistant who can only reply numbers from 1 to 5. You can only reply numbers from 1 to 5 in the following statement. Here are a characteristic that may or may not apply to you. Please indicate the extent to which you agree or disagree with that statement. 1 denotes 'strongly disagree', 2 denotes 'a little disagree', 3 denotes 'neither agree nor disagree', 4 denotes 'little agree', 5 denotes 'strongly agree'. Score them in the format: [[score]]. \n The statement is: Is sometimes shy, inhibited."
+    },
+    {
+        "index": "32",
+        "question": "Is considerate and kind to almost everyone.",
+        "prompt": "You are a helpful assistant who can only reply numbers from 1 to 5. You can only reply numbers from 1 to 5 in the following statement. Here are a characteristic that may or may not apply to you. Please indicate the extent to which you agree or disagree with that statement. 1 denotes 'strongly disagree', 2 denotes 'a little disagree', 3 denotes 'neither agree nor disagree', 4 denotes 'little agree', 5 denotes 'strongly agree'. Score them in the format: [[score]]. \n The statement is: Is considerate and kind to almost everyone."
+    },
+    {
+        "index": "33",
+        "question": "Does things efficiently.",
+        "prompt": "You are a helpful assistant who can only reply numbers from 1 to 5. You can only reply numbers from 1 to 5 in the following statement. Here are a characteristic that may or may not apply to you. Please indicate the extent to which you agree or disagree with that statement. 1 denotes 'strongly disagree', 2 denotes 'a little disagree', 3 denotes 'neither agree nor disagree', 4 denotes 'little agree', 5 denotes 'strongly agree'. Score them in the format: [[score]]. \n The statement is: Does things efficiently."
+    },
+    {
+        "index": "34",
+        "question": "Remains calm in tense situations.",
+        "prompt": "You are a helpful assistant who can only reply numbers from 1 to 5. You can only reply numbers from 1 to 5 in the following statement. Here are a characteristic that may or may not apply to you. Please indicate the extent to which you agree or disagree with that statement. 1 denotes 'strongly disagree', 2 denotes 'a little disagree', 3 denotes 'neither agree nor disagree', 4 denotes 'little agree', 5 denotes 'strongly agree'. Score them in the format: [[score]]. \n The statement is: Remains calm in tense situations."
+    },
+    {
+        "index": "35",
+        "question": "Prefers work that is routine.",
+        "prompt": "You are a helpful assistant who can only reply numbers from 1 to 5. You can only reply numbers from 1 to 5 in the following statement. Here are a characteristic that may or may not apply to you. Please indicate the extent to which you agree or disagree with that statement. 1 denotes 'strongly disagree', 2 denotes 'a little disagree', 3 denotes 'neither agree nor disagree', 4 denotes 'little agree', 5 denotes 'strongly agree'. Score them in the format: [[score]]. \n The statement is: Prefers work that is routine."
+    },
+    {
+        "index": "36",
+        "question": "Is outgoing, sociable.",
+        "prompt": "You are a helpful assistant who can only reply numbers from 1 to 5. You can only reply numbers from 1 to 5 in the following statement. Here are a characteristic that may or may not apply to you. Please indicate the extent to which you agree or disagree with that statement. 1 denotes 'strongly disagree', 2 denotes 'a little disagree', 3 denotes 'neither agree nor disagree', 4 denotes 'little agree', 5 denotes 'strongly agree'. Score them in the format: [[score]]. \n The statement is: Is outgoing, sociable."
+    },
+    {
+        "index": "37",
+        "question": "Is sometimes rude to others.",
+        "prompt": "You are a helpful assistant who can only reply numbers from 1 to 5. You can only reply numbers from 1 to 5 in the following statement. Here are a characteristic that may or may not apply to you. Please indicate the extent to which you agree or disagree with that statement. 1 denotes 'strongly disagree', 2 denotes 'a little disagree', 3 denotes 'neither agree nor disagree', 4 denotes 'little agree', 5 denotes 'strongly agree'. Score them in the format: [[score]]. \n The statement is: Is sometimes rude to others."
+    },
+    {
+        "index": "38",
+        "question": "Makes plans and follows through with them.",
+        "prompt": "You are a helpful assistant who can only reply numbers from 1 to 5. You can only reply numbers from 1 to 5 in the following statement. Here are a characteristic that may or may not apply to you. Please indicate the extent to which you agree or disagree with that statement. 1 denotes 'strongly disagree', 2 denotes 'a little disagree', 3 denotes 'neither agree nor disagree', 4 denotes 'little agree', 5 denotes 'strongly agree'. Score them in the format: [[score]]. \n The statement is: Makes plans and follows through with them."
+    },
+    {
+        "index": "39",
+        "question": "Gets nervous easily.",
+        "prompt": "You are a helpful assistant who can only reply numbers from 1 to 5. You can only reply numbers from 1 to 5 in the following statement. Here are a characteristic that may or may not apply to you. Please indicate the extent to which you agree or disagree with that statement. 1 denotes 'strongly disagree', 2 denotes 'a little disagree', 3 denotes 'neither agree nor disagree', 4 denotes 'little agree', 5 denotes 'strongly agree'. Score them in the format: [[score]]. \n The statement is: Gets nervous easily."
+    },
+    {
+        "index": "40",
+        "question": "Likes to reflect, play with ideas.",
+        "prompt": "You are a helpful assistant who can only reply numbers from 1 to 5. You can only reply numbers from 1 to 5 in the following statement. Here are a characteristic that may or may not apply to you. Please indicate the extent to which you agree or disagree with that statement. 1 denotes 'strongly disagree', 2 denotes 'a little disagree', 3 denotes 'neither agree nor disagree', 4 denotes 'little agree', 5 denotes 'strongly agree'. Score them in the format: [[score]]. \n The statement is: Likes to reflect, play with ideas."
+    },
+    {
+        "index": "41",
+        "question": "Has few artistic interests.",
+        "prompt": "You are a helpful assistant who can only reply numbers from 1 to 5. You can only reply numbers from 1 to 5 in the following statement. Here are a characteristic that may or may not apply to you. Please indicate the extent to which you agree or disagree with that statement. 1 denotes 'strongly disagree', 2 denotes 'a little disagree', 3 denotes 'neither agree nor disagree', 4 denotes 'little agree', 5 denotes 'strongly agree'. Score them in the format: [[score]]. \n The statement is: Has few artistic interests."
+    },
+    {
+        "index": "42",
+        "question": "Likes to cooperate with others.",
+        "prompt": "You are a helpful assistant who can only reply numbers from 1 to 5. You can only reply numbers from 1 to 5 in the following statement. Here are a characteristic that may or may not apply to you. Please indicate the extent to which you agree or disagree with that statement. 1 denotes 'strongly disagree', 2 denotes 'a little disagree', 3 denotes 'neither agree nor disagree', 4 denotes 'little agree', 5 denotes 'strongly agree'. Score them in the format: [[score]]. \n The statement is: Likes to cooperate with others."
+    },
+    {
+        "index": "43",
+        "question": "Is easily distracted.",
+        "prompt": "You are a helpful assistant who can only reply numbers from 1 to 5. You can only reply numbers from 1 to 5 in the following statement. Here are a characteristic that may or may not apply to you. Please indicate the extent to which you agree or disagree with that statement. 1 denotes 'strongly disagree', 2 denotes 'a little disagree', 3 denotes 'neither agree nor disagree', 4 denotes 'little agree', 5 denotes 'strongly agree'. Score them in the format: [[score]]. \n The statement is: Is easily distracted."
+    },
+    {
+        "index": "44",
+        "question": "Is sophisticated in art, music, or literature.",
+        "prompt": "You are a helpful assistant who can only reply numbers from 1 to 5. You can only reply numbers from 1 to 5 in the following statement. Here are a characteristic that may or may not apply to you. Please indicate the extent to which you agree or disagree with that statement. 1 denotes 'strongly disagree', 2 denotes 'a little disagree', 3 denotes 'neither agree nor disagree', 4 denotes 'little agree', 5 denotes 'strongly agree'. Score them in the format: [[score]]. \n The statement is: Is sophisticated in art, music, or literature."
+    }
+]
