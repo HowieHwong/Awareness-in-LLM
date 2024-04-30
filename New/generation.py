@@ -16,10 +16,11 @@ import config
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-deepinfra_model_mapping = {'Llama2-70b': 'meta-llama/Llama-2-70b-chat-hf',
-                           'Llama2-7b': 'meta-llama/Llama-2-7b-chat-hf',
-                           'Llama3-8b': 'meta-llama/Meta-Llama-3-8B-Instruct',
-                           'Llama3-70b': 'meta-llama/Meta-Llama-3-70B-Instruct'}
+deepinfra_model_mapping = {'llama2-70b': 'meta-llama/Llama-2-70b-chat-hf',
+                           'llama2-7b': 'meta-llama/Llama-2-7b-chat-hf',
+                           'llama3-8b': 'meta-llama/Meta-Llama-3-8B-Instruct',
+                           'llama3-70b': 'meta-llama/Meta-Llama-3-70B-Instruct',
+                           'mistral-7b': 'mistralai/Mistral-7B-Instruct-v0.2'}
 
 
 qwen_api_key = config.qwen_api_key
@@ -31,7 +32,7 @@ Emotion_File = ['EmoBench_EA.json', 'EmoBench_EU.json']
 Personality_File = ['big_five.json', 'dark_traits.json']
 
 @retry(wait=wait_random_exponential(min=1, max=10), stop=stop_after_attempt(6))
-def get_res(string, model):
+def get_res(string, model, temperature=0.5):
     model_mapping = {'gpt-4': 'yuehuang-gpt-4', 'chatgpt': 'yuehuang-chatgpt'}
     client = AzureOpenAI(
         api_key=openai_api,
@@ -44,6 +45,7 @@ def get_res(string, model):
             messages=[
                 {"role": "user", "content": string}
             ],
+            temperature=0.5
         )
         print(chat_completion.choices[0].message.content)
         return chat_completion.choices[0].message.content
@@ -51,7 +53,7 @@ def get_res(string, model):
         print(e)
         return None
 
-def qwen_res(string):
+def qwen_res(string, temperature=0.5):
     dashscope.api_key=qwen_api_key
     messages = [{'role': 'system', 'content': 'You are a helpful assistant.'},
                 {'role': 'user', 'content': string}]
@@ -60,6 +62,7 @@ def qwen_res(string):
             dashscope.Generation.Models.qwen_turbo,
             messages=messages,
             result_format='message',  # set the result to be "message" format.
+            temperature=0.5
         )
         if response.status_code == HTTPStatus.OK:
             print(response)
@@ -71,7 +74,7 @@ def qwen_res(string):
         return None
 
 @retry(wait=wait_random_exponential(min=1, max=10), stop=stop_after_attempt(6))
-def deepinfra_api(string, model, temperature):
+def deepinfra_res(string, model, temperature=0.5):
     client = OpenAI(api_key=deepinfra_api,
                     base_url='https://api.deepinfra.com/v1/openai')
     top_p = 1 if temperature <= 1e-5 else 0.9
@@ -83,17 +86,19 @@ def deepinfra_api(string, model, temperature):
         temperature=temperature,
         top_p=top_p,
     )
+    print(chat_completion.choices[0].message.content)
     return chat_completion.choices[0].message.content
 
 @retry(wait=wait_random_exponential(min=1, max=10), stop=stop_after_attempt(6))
-def zhipu_api(string, model, temperature):
+def zhipu_res(string, model, temperature=0.5):
+    model_mapping = {'glm4': 'GLM-4'}
     client = ZhipuAI(api_key=zhipu_api)
     if temperature == 0:
         temperature = 0.01
     else:
         temperature = 0.99
     response = client.chat.completions.create(
-        model=model,
+        model=model_mapping[model],
         messages=[
             {"role": "user", "content": string},
         ],
@@ -103,3 +108,30 @@ def zhipu_api(string, model, temperature):
     return response.choices[0].message.content
 
 
+def run_task(eval_type, file_list, model):
+    assert eval_type in ['emotion', 'personality', 'value', 'culture']
+    for file in file_list:
+        with open(os.path.join(eval_type, file), 'r') as f:
+            test_data = json.load(f)
+
+        save_data = []
+        for el in tqdm(test_data):
+            if model in ['chatgpt', 'gpt-4']:
+                el['res'] = get_res(el['prompt'], model)
+            elif model in ['llama3-8b', 'llama3-70b', 'mistral-7b']:
+                el['res'] = deepinfra_res(el['prompt'], model)
+            elif model in ['glm4']:
+                el['res'] = zhipu_res(el['prompt'], model)
+            elif model in ['qwen-turbo']:
+                el['res'] = qwen_res(el['prompt'])
+            else:
+                raise ValueError('No model')
+            save_data.append(el)
+
+            # judge whether the path exists
+            if not os.path.exists(os.path.join('result', model)):
+                os.makedirs(os.path.join('result', model))
+            with open(os.path.join('result', model, file.replace('.json', '_res.json')), 'w') as f:
+                json.dump(save_data, f, indent=4, ensure_ascii=False)
+
+# run_task('emotion', Emotion_File, 'llama3-8b')
