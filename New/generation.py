@@ -20,7 +20,8 @@ deepinfra_model_mapping = {'llama2-70b': 'meta-llama/Llama-2-70b-chat-hf',
                            'llama2-7b': 'meta-llama/Llama-2-7b-chat-hf',
                            'llama3-8b': 'meta-llama/Meta-Llama-3-8B-Instruct',
                            'llama3-70b': 'meta-llama/Meta-Llama-3-70B-Instruct',
-                           'mistral-7b': 'mistralai/Mistral-7B-Instruct-v0.2'}
+                           'mistral-7b': 'mistralai/Mistral-7B-Instruct-v0.2',
+                           'mixtral': 'mistralai/Mixtral-8x7B-Instruct-v0.1'}
 
 
 qwen_api_key = config.qwen_api_key
@@ -118,7 +119,7 @@ def run_task(eval_type, file_list, model):
         for el in tqdm(test_data):
             if model in ['chatgpt', 'gpt-4']:
                 el['res'] = get_res(el['prompt'], model)
-            elif model in ['llama3-8b', 'llama3-70b', 'mistral-7b']:
+            elif model in ['llama3-8b', 'llama3-70b', 'mistral-7b', 'mixtral']:
                 el['res'] = deepinfra_res(el['prompt'], model)
             elif model in ['glm4']:
                 el['res'] = zhipu_res(el['prompt'], model)
@@ -134,4 +135,4 @@ def run_task(eval_type, file_list, model):
             with open(os.path.join('result', model, file.replace('.json', '_res.json')), 'w') as f:
                 json.dump(save_data, f, indent=4, ensure_ascii=False)
 
-# run_task('emotion', Emotion_File, 'llama3-8b')
+run_task('emotion', Emotion_File, 'chatgpt')
