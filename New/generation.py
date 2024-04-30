@@ -12,7 +12,7 @@ import concurrent.futures
 import os, time
 from tenacity import retry, wait_random_exponential, stop_after_attempt
 import urllib3
-
+import config
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
@@ -22,10 +22,13 @@ deepinfra_model_mapping = {'Llama2-70b': 'meta-llama/Llama-2-70b-chat-hf',
                            'Llama3-70b': 'meta-llama/Meta-Llama-3-70B-Instruct'}
 
 
-qwen_api_key = ""
-openai_api = ""
-deepinfra_api = ""
-zhipu_api = ""
+qwen_api_key = config.qwen_api_key
+openai_api = config.openai_api
+deepinfra_api = config.deepinfra_api
+zhipu_api = config.zhipu_api
+
+Emotion_File = ['EmoBench_EA.json', 'EmoBench_EU.json']
+Personality_File = ['big_five.json', 'dark_traits.json']
 
 @retry(wait=wait_random_exponential(min=1, max=10), stop=stop_after_attempt(6))
 def get_res(string, model):
@@ -98,3 +101,5 @@ def zhipu_api(string, model, temperature):
     )
     print(response.choices[0].message.content)
     return response.choices[0].message.content
+
+
