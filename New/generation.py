@@ -21,7 +21,8 @@ deepinfra_model_mapping = {'llama2-70b': 'meta-llama/Llama-2-70b-chat-hf',
                            'llama3-8b': 'meta-llama/Meta-Llama-3-8B-Instruct',
                            'llama3-70b': 'meta-llama/Meta-Llama-3-70B-Instruct',
                            'mistral-7b': 'mistralai/Mistral-7B-Instruct-v0.2',
-                           'mixtral': 'mistralai/Mixtral-8x7B-Instruct-v0.1'}
+                           'mixtral': 'mistralai/Mixtral-8x7B-Instruct-v0.1',
+                           'mixtral-large': 'mistralai/Mixtral-8x22B-Instruct-v0.1'}
 
 
 qwen_api_key = config.qwen_api_key
@@ -112,27 +113,35 @@ def zhipu_res(string, model, temperature=0.5):
 def run_task(eval_type, file_list, model):
     assert eval_type in ['emotion', 'personality', 'value', 'culture']
     for file in file_list:
+        # judge whether the path exists
+        if not os.path.exists(os.path.join('result', model)):
+            os.makedirs(os.path.join('result', model))
+        # record the existing results
+        if os.path.exists(os.path.join('result', model, file.replace('.json', '_res.json'))):
+            save_data = json.load(open(os.path.join('result', model, file.replace('.json', '_res.json')), 'r'))
+        else:
+            save_data = []
+
         with open(os.path.join(eval_type, file), 'r') as f:
             test_data = json.load(f)
 
-        save_data = []
         for el in tqdm(test_data):
-            if model in ['chatgpt', 'gpt-4']:
-                el['res'] = get_res(el['prompt'], model)
-            elif model in ['llama3-8b', 'llama3-70b', 'mistral-7b', 'mixtral']:
-                el['res'] = deepinfra_res(el['prompt'], model)
-            elif model in ['glm4']:
-                el['res'] = zhipu_res(el['prompt'], model)
-            elif model in ['qwen-turbo']:
-                el['res'] = qwen_res(el['prompt'])
+            if el['prompt'] in [k['prompt'] for k in save_data]:
+                continue
             else:
-                raise ValueError('No model')
-            save_data.append(el)
-
-            # judge whether the path exists
-            if not os.path.exists(os.path.join('result', model)):
-                os.makedirs(os.path.join('result', model))
+                if model in ['chatgpt', 'gpt-4']:
+                    el['res'] = get_res(el['prompt'], model)
+                elif model in ['llama3-8b', 'llama3-70b', 'mistral-7b', 'mixtral', 'mixtral-large']:
+                    el['res'] = deepinfra_res(el['prompt'], model)
+                elif model in ['glm4']:
+                    el['res'] = zhipu_res(el['prompt'], model)
+                elif model in ['qwen-turbo']:
+                    el['res'] = qwen_res(el['prompt'])
+                else:
+                    raise ValueError('No model')
+                save_data.append(el)
             with open(os.path.join('result', model, file.replace('.json', '_res.json')), 'w') as f:
                 json.dump(save_data, f, indent=4, ensure_ascii=False)
+        print(f'Finish {file}')
 
-run_task('emotion', Emotion_File, 'chatgpt')
+run_task('emotion', [Emotion_File[1]], 'glm4')
