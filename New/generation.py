@@ -32,6 +32,7 @@ zhipu_api = config.zhipu_api
 
 Emotion_File = ['EmoBench_EA.json', 'EmoBench_EU.json']
 Personality_File = ['big_five.json', 'dark_traits.json']
+Culture_File = ['culture_orientation.json']
 
 @retry(wait=wait_random_exponential(min=1, max=10), stop=stop_after_attempt(6))
 def get_res(string, model, temperature=0.5):
@@ -144,4 +145,7 @@ def run_task(eval_type, file_list, model):
                 json.dump(save_data, f, indent=4, ensure_ascii=False)
         print(f'Finish {file}')
 
-run_task('emotion', [Emotion_File[1]], 'glm4')
+
+model_list = ['gpt-4', 'llama3-8b', 'llama3-70b', 'mixtral', 'mistral-7b', 'mixtral-large', 'glm4', 'qwen-turbo', 'chatgpt']
+for model in model_list:
+    run_task('personality', Personality_File, model)
