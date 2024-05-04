@@ -1,9 +1,27 @@
-gpt-4,"{'Machiavellianism': 2.4444444444444446, 'Narcissism': 0.7777777777777778, 'Psychopathy': 0.1111111111111111}"
-chatgpt,"{'Machiavellianism': 3.0, 'Narcissism': 0.8888888888888888, 'Psychopathy': 1.375}"
-llama3-8b,"{'Machiavellianism': 3.111111111111111, 'Narcissism': 1.0, 'Psychopathy': 1.25}"
-llama3-70b,"{'Machiavellianism': 3.0, 'Narcissism': 1.2222222222222223, 'Psychopathy': 0.3333333333333333}"
-mixtral,"{'Machiavellianism': 2.7777777777777777, 'Narcissism': 0.1111111111111111, 'Psychopathy': 0.2222222222222222}"
-mistral-7b,"{'Machiavellianism': 3.0, 'Narcissism': 0.7777777777777778, 'Psychopathy': 0.6666666666666666}"
-mixtral-large,"{'Machiavellianism': 2.7777777777777777, 'Narcissism': 1.6666666666666667, 'Psychopathy': 0.0}"
-glm4,"{'Machiavellianism': 2.6666666666666665, 'Narcissism': 1.2222222222222223, 'Psychopathy': 0.4444444444444444}"
-qwen-turbo,"{'Machiavellianism': 3.0, 'Narcissism': 1.5555555555555556, 'Psychopathy': 0.7777777777777778}"
+gpt-4,Machiavellianism,2.4444444444444446
+gpt-4,Narcissism,2.7777777777777777
+gpt-4,Psychopathy,1.4444444444444444
+chatgpt,Machiavellianism,3.0
+chatgpt,Narcissism,2.888888888888889
+chatgpt,Psychopathy,2.875
+llama3-8b,Machiavellianism,3.111111111111111
+llama3-8b,Narcissism,3.0
+llama3-8b,Psychopathy,2.75
+llama3-70b,Machiavellianism,3.0
+llama3-70b,Narcissism,3.2222222222222223
+llama3-70b,Psychopathy,1.6666666666666667
+mixtral,Machiavellianism,2.7777777777777777
+mixtral,Narcissism,2.111111111111111
+mixtral,Psychopathy,1.5555555555555556
+mistral-7b,Machiavellianism,3.0
+mistral-7b,Narcissism,2.7777777777777777
+mistral-7b,Psychopathy,2.0
+mixtral-large,Machiavellianism,2.7777777777777777
+mixtral-large,Narcissism,3.6666666666666665
+mixtral-large,Psychopathy,1.3333333333333333
+glm4,Machiavellianism,2.6666666666666665
+glm4,Narcissism,3.2222222222222223
+glm4,Psychopathy,1.7777777777777777
+qwen-turbo,Machiavellianism,3.0
+qwen-turbo,Narcissism,3.5555555555555554
+qwen-turbo,Psychopathy,2.111111111111111

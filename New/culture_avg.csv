@@ -1,0 +1,81 @@
+gpt-4,Uncertainty Avoidance,4.5
+gpt-4,Power Distance,4.0
+gpt-4,Institutional Collectivism,3.0
+gpt-4,In-Group Collectivism,6.0
+gpt-4,Gender Egalitarianism,2.5
+gpt-4,Assertiveness,4.0
+gpt-4,Future Orientation,2.5
+gpt-4,Performance Orientation,6.0
+gpt-4,Humane Orientation,5.5
+chatgpt,Uncertainty Avoidance,5.0
+chatgpt,Power Distance,2.5
+chatgpt,Institutional Collectivism,4.5
+chatgpt,In-Group Collectivism,6.0
+chatgpt,Gender Egalitarianism,5.5
+chatgpt,Assertiveness,5.0
+chatgpt,Future Orientation,4.5
+chatgpt,Performance Orientation,6.0
+chatgpt,Humane Orientation,2.5
+llama3-8b,Uncertainty Avoidance,5.5
+llama3-8b,Power Distance,3.5
+llama3-8b,Institutional Collectivism,5.0
+llama3-8b,In-Group Collectivism,4.5
+llama3-8b,Gender Egalitarianism,5.0
+llama3-8b,Assertiveness,4.0
+llama3-8b,Future Orientation,5.5
+llama3-8b,Performance Orientation,6.0
+llama3-8b,Humane Orientation,5.0
+llama3-70b,Uncertainty Avoidance,5.5
+llama3-70b,Power Distance,3.5
+llama3-70b,Institutional Collectivism,4.5
+llama3-70b,In-Group Collectivism,5.5
+llama3-70b,Gender Egalitarianism,3.5
+llama3-70b,Assertiveness,4.5
+llama3-70b,Future Orientation,6.0
+llama3-70b,Performance Orientation,6.0
+llama3-70b,Humane Orientation,4.0
+mixtral,Uncertainty Avoidance,4.5
+mixtral,Power Distance,3.0
+mixtral,Institutional Collectivism,4.0
+mixtral,In-Group Collectivism,5.5
+mixtral,Gender Egalitarianism,2.5
+mixtral,Assertiveness,5.0
+mixtral,Future Orientation,1.0
+mixtral,Performance Orientation,7.0
+mixtral,Humane Orientation,5.0
+mistral-7b,Uncertainty Avoidance,3.0
+mistral-7b,Power Distance,3.0
+mistral-7b,Institutional Collectivism,1.0
+mistral-7b,In-Group Collectivism,4.0
+mistral-7b,Gender Egalitarianism,1.0
+mistral-7b,Assertiveness,1.0
+mistral-7b,Future Orientation,1.0
+mistral-7b,Performance Orientation,4.0
+mistral-7b,Humane Orientation,1.0
+mixtral-large,Uncertainty Avoidance,6.5
+mixtral-large,Power Distance,4.0
+mixtral-large,Institutional Collectivism,3.0
+mixtral-large,In-Group Collectivism,7.0
+mixtral-large,Gender Egalitarianism,2.5
+mixtral-large,Assertiveness,3.5
+mixtral-large,Future Orientation,4.0
+mixtral-large,Performance Orientation,7.0
+mixtral-large,Humane Orientation,4.0
+glm4,Uncertainty Avoidance,4.5
+glm4,Power Distance,2.5
+glm4,Institutional Collectivism,5.0
+glm4,In-Group Collectivism,5.5
+glm4,Gender Egalitarianism,1.0
+glm4,Assertiveness,4.0
+glm4,Future Orientation,4.5
+glm4,Performance Orientation,7.0
+glm4,Humane Orientation,4.0
+qwen-turbo,Uncertainty Avoidance,5.0
+qwen-turbo,Power Distance,3.0
+qwen-turbo,Institutional Collectivism,5.0
+qwen-turbo,In-Group Collectivism,6.0
+qwen-turbo,Gender Egalitarianism,2.0
+qwen-turbo,Assertiveness,3.0
+qwen-turbo,Future Orientation,5.0
+qwen-turbo,Performance Orientation,6.0
+qwen-turbo,Humane Orientation,3.0

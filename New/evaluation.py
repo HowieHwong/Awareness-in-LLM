@@ -46,7 +46,7 @@ def big_five_eval(models: list, file: str, save_dir='result'):
                 el['index'] = int(el['index'])
                 number = int(number)
                 if el['index'] in reverse_question:
-                    number = - number
+                    number = 6 - number
 
                 if el['index'] in Extraversion_question:
                     model_score_dict[model]['Extraversion'].append(number)
@@ -79,12 +79,14 @@ def big_five_eval(models: list, file: str, save_dir='result'):
     with open('big_five_avg.csv', 'w', newline='') as csvfile:
         writer = csv.writer(csvfile)
         for model in models:
-            writer.writerow([model] + [model_avg_score[model][dimension] for dimension in model_avg_score[model]])
+            for dimension in model_avg_score[model]:
+                writer.writerow([model, dimension, model_avg_score[model][dimension]])
 
     with open('big_five_std.csv', 'w', newline='') as csvfile:
         writer = csv.writer(csvfile)
         for model in models:
-            writer.writerow([model] + [model_std_score[model][dimension] for dimension in model_std_score[model]])
+            for dimension in model_std_score[model]:
+                writer.writerow([model, dimension, model_std_score[model][dimension]])
 
     return model_score_dict, model_avg_score, model_std_score
 
@@ -110,7 +112,7 @@ def dark_traits_eval(models: list, file: str, save_dir='result'):
             if number != 'No numbers found':
                 number = int(number)
                 if el['reverse']:
-                    number = - number
+                    number = 6 - number
                 if el['question'] in Machiavellianism_question:
                     model_score_dict[model]['Machiavellianism'].append(number)
                 elif el['question'] in Narcissism_question:
@@ -139,13 +141,15 @@ def dark_traits_eval(models: list, file: str, save_dir='result'):
     with open('dark_traits_avg.csv', 'w', newline='') as csvfile:
         writer = csv.writer(csvfile)
         for model in models:
-            writer.writerow([model, model_avg_dict[model]])
+            for dimension in model_avg_dict[model]:
+                writer.writerow([model, dimension, model_avg_dict[model][dimension]])
 
     # save model_std_dict as csv
     with open('dark_traits_std.csv', 'w', newline='') as csvfile:
         writer = csv.writer(csvfile)
         for model in models:
-            writer.writerow([model, model_std_dict[model]])
+            for dimension in model_std_dict[model]:
+                writer.writerow([model, dimension, model_std_dict[model][dimension]])
 
     return model_score_dict, model_avg_dict, model_std_dict
 
@@ -301,14 +305,16 @@ def culture_eval(models: list, file: str, save_dir='result'):
     with open('culture_avg.csv', 'w', newline='') as csvfile:
         writer = csv.writer(csvfile)
         for model in models:
-            row = [model] + [model_avg_dict[model][dimension] for dimension in model_avg_dict[model]]
-            writer.writerow(row)
+            for dimension in model_avg_dict[model]:
+                row = [model, dimension, model_avg_dict[model][dimension]]
+                writer.writerow(row)
 
     with open('culture_std.csv', 'w', newline='') as csvfile:
         writer = csv.writer(csvfile)
         for model in models:
-            row = [model] + [model_std_dict[model][dimension] for dimension in model_std_dict[model]]
-            writer.writerow(row)
+            for dimension in model_std_dict[model]:
+                row = [model, dimension, model_std_dict[model][dimension]]
+                writer.writerow(row)
 
 
 
@@ -321,9 +327,9 @@ def culture_eval(models: list, file: str, save_dir='result'):
 
 
 
-emotion_EA_eval(['gpt-4', 'chatgpt', 'llama3-8b', 'llama3-70b', 'mixtral', 'mistral-7b', 'mixtral-large', 'glm4', 'qwen-turbo'], 'EmoBench_EA_res.json')
-emotion_EU_eval(['gpt-4', 'chatgpt', 'llama3-8b', 'llama3-70b', 'mixtral', 'mistral-7b', 'mixtral-large', 'glm4', 'qwen-turbo'], 'EmoBench_EU_res.json')
+# emotion_EA_eval(['gpt-4', 'chatgpt', 'llama3-8b', 'llama3-70b', 'mixtral', 'mistral-7b', 'mixtral-large', 'glm4', 'qwen-turbo'], 'EmoBench_EA_res.json')
+# emotion_EU_eval(['gpt-4', 'chatgpt', 'llama3-8b', 'llama3-70b', 'mixtral', 'mistral-7b', 'mixtral-large', 'glm4', 'qwen-turbo'], 'EmoBench_EU_res.json')
 big_five_eval(['gpt-4', 'chatgpt', 'llama3-8b', 'llama3-70b', 'mixtral', 'mistral-7b', 'mixtral-large', 'glm4', 'qwen-turbo'], 'big_five_res.json')
 dark_traits_eval(['gpt-4', 'chatgpt', 'llama3-8b', 'llama3-70b', 'mixtral', 'mistral-7b', 'mixtral-large', 'glm4', 'qwen-turbo'], 'dark_traits_res.json')
-culture_eval(['gpt-4', 'chatgpt', 'llama3-8b', 'llama3-70b', 'mixtral', 'mistral-7b', 'mixtral-large', 'glm4', 'qwen-turbo'], 'culture_orientation_res.json')
+# culture_eval(['gpt-4', 'chatgpt', 'llama3-8b', 'llama3-70b', 'mixtral', 'mistral-7b', 'mixtral-large', 'glm4', 'qwen-turbo'], 'culture_orientation_res.json')
 
