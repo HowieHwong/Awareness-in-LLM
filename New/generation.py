@@ -7,6 +7,7 @@ import traceback
 import replicate
 from openai import AzureOpenAI, OpenAI
 import json
+from concurrent.futures import ThreadPoolExecutor
 from tqdm import tqdm
 import concurrent.futures
 import os, time
@@ -30,7 +31,7 @@ openai_api = config.openai_api
 deepinfra_api = config.deepinfra_api
 zhipu_api = config.zhipu_api
 
-Emotion_File = ['EmoBench_EA.json', 'EmoBench_EU.json']
+Emotion_File = ['EmoBench_EU_Shuffled_Fixed_1.json', 'EmoBench_EU_Shuffled_Fixed_2.json', 'EmoBench_EU_Shuffled_Fixed_3.json']
 Personality_File = ['big_five.json', 'dark_traits.json']
 Culture_File = ['culture_orientation.json']
 
@@ -111,41 +112,61 @@ def zhipu_res(string, model, temperature=0.5):
     return response.choices[0].message.content
 
 
+def process_prompt(el, model):
+    if model in ['chatgpt', 'gpt-4']:
+        el['res'] = get_res(el['prompt'], model)
+    elif model in ['llama3-8b', 'llama3-70b', 'mistral-7b', 'mixtral', 'mixtral-large']:
+        el['res'] = deepinfra_res(el['prompt'], model)
+    elif model in ['glm4']:
+        el['res'] = zhipu_res(el['prompt'], model)
+    elif model in ['qwen-turbo']:
+        el['res'] = qwen_res(el['prompt'])
+    else:
+        raise ValueError('No model')
+    return el
+
+
+def process_file(eval_type, file, model):
+    if not os.path.exists(os.path.join('result', model)):
+        os.makedirs(os.path.join('result', model))
+
+    if os.path.exists(os.path.join('result', model, file.replace('.json', '_res.json'))):
+        save_data = json.load(open(os.path.join('result', model, file.replace('.json', '_res.json')), 'r'))
+    else:
+        save_data = []
+
+    with open(os.path.join(eval_type, file), 'r') as f:
+        test_data = json.load(f)
+
+    if model in ['chatgpt', 'gpt-4']:
+        max_worker = 5
+    else:
+        max_worker = 1
+
+
+    with ThreadPoolExecutor(max_workers=max_worker) as executor:
+        futures = {executor.submit(process_prompt, el, model): el for el in test_data if
+                   el['prompt'] not in [k['prompt'] for k in save_data]}
+        for future in tqdm(futures):
+            el = futures[future]
+            try:
+                result = future.result()
+                save_data.append(result)
+            except Exception as exc:
+                print(f"Generated an exception: {exc}")
+
+    with open(os.path.join('result', model, file.replace('.json', '_res.json')), 'w') as f:
+        json.dump(save_data, f, indent=4, ensure_ascii=False)
+
+    print(f'Finish {file}')
+
+
 def run_task(eval_type, file_list, model):
     assert eval_type in ['emotion', 'personality', 'value', 'culture']
     for file in file_list:
-        # judge whether the path exists
-        if not os.path.exists(os.path.join('result', model)):
-            os.makedirs(os.path.join('result', model))
-        # record the existing results
-        if os.path.exists(os.path.join('result', model, file.replace('.json', '_res.json'))):
-            save_data = json.load(open(os.path.join('result', model, file.replace('.json', '_res.json')), 'r'))
-        else:
-            save_data = []
-
-        with open(os.path.join(eval_type, file), 'r') as f:
-            test_data = json.load(f)
-
-        for el in tqdm(test_data):
-            if el['prompt'] in [k['prompt'] for k in save_data]:
-                continue
-            else:
-                if model in ['chatgpt', 'gpt-4']:
-                    el['res'] = get_res(el['prompt'], model)
-                elif model in ['llama3-8b', 'llama3-70b', 'mistral-7b', 'mixtral', 'mixtral-large']:
-                    el['res'] = deepinfra_res(el['prompt'], model)
-                elif model in ['glm4']:
-                    el['res'] = zhipu_res(el['prompt'], model)
-                elif model in ['qwen-turbo']:
-                    el['res'] = qwen_res(el['prompt'])
-                else:
-                    raise ValueError('No model')
-                save_data.append(el)
-            with open(os.path.join('result', model, file.replace('.json', '_res.json')), 'w') as f:
-                json.dump(save_data, f, indent=4, ensure_ascii=False)
-        print(f'Finish {file}')
+        process_file(eval_type, file, model)
 
 
 model_list = ['gpt-4', 'llama3-8b', 'llama3-70b', 'mixtral', 'mistral-7b', 'mixtral-large', 'glm4', 'qwen-turbo', 'chatgpt']
 for model in model_list:
-    run_task('personality', Personality_File, model)
+    run_task('emotion', Emotion_File, model)
