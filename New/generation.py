@@ -32,7 +32,7 @@ deepinfra_api = config.deepinfra_api
 zhipu_api = config.zhipu_api
 
 Emotion_File = ['EmoBench_EU_Shuffled_Fixed_1.json', 'EmoBench_EU_Shuffled_Fixed_2.json', 'EmoBench_EU_Shuffled_Fixed_3.json']
-Personality_File = ['big_five.json', 'dark_traits.json']
+Personality_File = ['big_five_new_3.json']
 Culture_File = ['culture_orientation.json']
 
 @retry(wait=wait_random_exponential(min=1, max=10), stop=stop_after_attempt(6))
@@ -169,4 +169,4 @@ def run_task(eval_type, file_list, model):
 
 model_list = ['gpt-4', 'llama3-8b', 'llama3-70b', 'mixtral', 'mistral-7b', 'mixtral-large', 'glm4', 'qwen-turbo', 'chatgpt']
 for model in model_list:
-    run_task('emotion', Emotion_File, model)
+    run_task('personality', Personality_File, model)

@@ -62,6 +62,7 @@ def big_five_eval(models: list, file: str, save_dir='result'):
                     print(el['index'])
                     raise ValueError('No Dimension!')
 
+    print(model_score_dict)
     # calculate avg and standard deviation for each dimension
     model_avg_score = {}
     for model in models:
@@ -76,13 +77,13 @@ def big_five_eval(models: list, file: str, save_dir='result'):
             model_std_score[model][dimension] = np.std(model_score_dict[model][dimension])
 
     # save model_avg_dict as csv
-    with open('big_five_avg.csv', 'w', newline='') as csvfile:
+    with open('big_five_avg_2.csv', 'w', newline='') as csvfile:
         writer = csv.writer(csvfile)
         for model in models:
             for dimension in model_avg_score[model]:
                 writer.writerow([model, dimension, model_avg_score[model][dimension]])
 
-    with open('big_five_std.csv', 'w', newline='') as csvfile:
+    with open('big_five_std_2.csv', 'w', newline='') as csvfile:
         writer = csv.writer(csvfile)
         for model in models:
             for dimension in model_std_score[model]:
@@ -235,7 +236,7 @@ def emotion_EA_eval(models: list, file: str, save_dir='result'):
         avg_dict[model] = sum(model_score_dict[model]) / len(model_score_dict[model])
     print(avg_dict)
     # save avg_dict as csv
-    with open('emotion_EA_avg.csv', 'w', newline='') as csvfile:
+    with open(file.replace('_res.json', '_avg.csv'), 'w', newline='') as csvfile:
         writer = csv.writer(csvfile)
         for model in models:
             writer.writerow([model, avg_dict[model]])
@@ -266,7 +267,7 @@ def emotion_EU_eval(models: list, file: str, save_dir='result'):
 
     print(avg_dict)
     # save avg_dict as csv
-    with open('emotion_EU_avg.csv', 'w', newline='') as csvfile:
+    with open(file.replace('_res.json', '_avg.csv'), 'w', newline='') as csvfile:
         writer = csv.writer(csvfile)
         for key, value in avg_dict.items():
             writer.writerow([key, value])
@@ -325,11 +326,17 @@ def culture_eval(models: list, file: str, save_dir='result'):
 
 
 
+# file_list = ['EmoBench_EU_Shuffled_Fixed_1_res.json', 'EmoBench_EU_Shuffled_Fixed_2_res.json', 'EmoBench_EU_Shuffled_Fixed_3_res.json']
+# for file in file_list:
+#     emotion_EU_eval(['gpt-4', 'chatgpt', 'llama3-8b', 'llama3-70b', 'mixtral', 'mistral-7b', 'mixtral-large', 'glm4', 'qwen-turbo'], file)
+#
+# file_list = ['Shuffled_Version_1_EmoBench_EA_res.json', 'Shuffled_Version_2_EmoBench_EA_res.json', 'Shuffled_Version_3_EmoBench_EA_res.json']
+# for file in file_list:
+#     emotion_EA_eval(['gpt-4', 'chatgpt', 'llama3-8b', 'llama3-70b', 'mixtral', 'mistral-7b', 'mixtral-large', 'glm4', 'qwen-turbo'], file)
 
 
-# emotion_EA_eval(['gpt-4', 'chatgpt', 'llama3-8b', 'llama3-70b', 'mixtral', 'mistral-7b', 'mixtral-large', 'glm4', 'qwen-turbo'], 'EmoBench_EA_res.json')
 # emotion_EU_eval(['gpt-4', 'chatgpt', 'llama3-8b', 'llama3-70b', 'mixtral', 'mistral-7b', 'mixtral-large', 'glm4', 'qwen-turbo'], 'EmoBench_EU_res.json')
-big_five_eval(['gpt-4', 'chatgpt', 'llama3-8b', 'llama3-70b', 'mixtral', 'mistral-7b', 'mixtral-large', 'glm4', 'qwen-turbo'], 'big_five_res.json')
-dark_traits_eval(['gpt-4', 'chatgpt', 'llama3-8b', 'llama3-70b', 'mixtral', 'mistral-7b', 'mixtral-large', 'glm4', 'qwen-turbo'], 'dark_traits_res.json')
+big_five_eval(['gpt-4', 'chatgpt', 'llama3-8b', 'llama3-70b', 'mixtral', 'mistral-7b', 'mixtral-large', 'glm4', 'qwen-turbo'], 'big_five_new_2_res.json')
+# dark_traits_eval(['gpt-4', 'chatgpt', 'llama3-8b', 'llama3-70b', 'mixtral', 'mistral-7b', 'mixtral-large', 'glm4', 'qwen-turbo'], 'dark_traits_res.json')
 # culture_eval(['gpt-4', 'chatgpt', 'llama3-8b', 'llama3-70b', 'mixtral', 'mistral-7b', 'mixtral-large', 'glm4', 'qwen-turbo'], 'culture_orientation_res.json')
 

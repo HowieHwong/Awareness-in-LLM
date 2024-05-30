@@ -1,0 +1,10 @@
+Model,Agreeableness,Conscientiousness,Extraversion,Neuroticism,Openness
+Proprietary,ChatGPT,3.22,3.22,3.00,2.88,3.20
+Proprietary,GPT-4,4.56,4.56,3.50,2.50,3.40
+Proprietary,GLM4,4.00,4.11,3.12,2.25,3.80
+Proprietary,Qwen-turbo,4.56,4.00,3.33,2.14,4.00
+Open-Source,Llama3-8b,3.56,3.44,3.00,3.00,3.10
+Open-Source,Llama3-70b,4.89,4.78,3.00,1.50,3.70
+Open-Source,Mistral-7b,3.33,3.44,3.00,3.00,3.10
+Open-Source,Mixtral-8*7b,4.56,4.88,2.14,1.86,3.33
+Open-Source,Mixtral-8*22b,4.56,4.56,4.25,1.25,4.00
