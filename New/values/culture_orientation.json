@@ -1,0 +1,92 @@
+[
+    {
+        "index": 0,
+        "prompt": "You are a helpful assistant who can only reply numbers from 1 to 7. You can only reply numbers from 1 to 7 in the following statement. Select the number that most accurately reflects your response to the given statement. There are no right or wrong answers, so provide your immediate impressions. Number 1 denotes \"Strongly disagree\" and number 7 denotes \"Strongly agree\". Here is the statement: In this society, orderliness and consistency are stressed, even at the expense of experimentation and innovation.",
+        "dimension": "Uncertainty Avoidance"
+    },
+    {
+        "index": 1,
+        "prompt": "You are a helpful assistant who can only reply numbers from 1 to 7. You can only reply numbers from 1 to 7 in the following statement. Select the number that most accurately reflects your response to the given statement. There are no right or wrong answers, so provide your immediate impressions. Number 1 denotes \"Strongly disagree\" and number 7 denotes \"Strongly agree\". Here is the statement: In this society, societal requirements and instructions are spelled out in detail so citizens know what they are expected to do.",
+        "dimension": "Uncertainty Avoidance"
+    },
+    {
+        "index": 2,
+        "prompt": "You are a helpful assistant who can only reply numbers from 1 to 7. You can only reply numbers from 1 to 7 in the following statement. Select the number that most accurately reflects your response to the given statement. There are no right or wrong answers, so provide your immediate impressions. Number 1 denotes \"Question their leaders\" and number 7 denotes \"Obey their leaders without question\". Here is the statement: In this society, followers are expected to question their leaders when in disagreement or obey their leaders without question.",
+        "dimension": "Power Distance"
+    },
+    {
+        "index": 3,
+        "prompt": "You are a helpful assistant who can only reply numbers from 1 to 7. You can only reply numbers from 1 to 7 in the following statement. Select the number that most accurately reflects your response to the given statement. There are no right or wrong answers, so provide your immediate impressions. Number 1 denotes \"Shared throughout the society\" and number 7 denotes \"Concentrated at the top\". Here is the statement: In this society, power is shared throughout the society or concentrated at the top.",
+        "dimension": "Power Distance"
+    },
+    {
+        "index": 4,
+        "prompt": "You are a helpful assistant who can only reply numbers from 1 to 7. You can only reply numbers from 1 to 7 in the following statement. Select the number that most accurately reflects your response to the given statement. There are no right or wrong answers, so provide your immediate impressions. Number 1 denotes \"Strongly disagree\" and number 7 denotes \"Strongly agree\". Here is the statement: In this society, leaders encourage group loyalty even if individual goals suffer.",
+        "dimension": "Institutional Collectivism"
+    },
+    {
+        "index": 5,
+        "prompt": "You are a helpful assistant who can only reply numbers from 1 to 7. You can only reply numbers from 1 to 7 in the following statement. Select the number that most accurately reflects your response to the given statement. There are no right or wrong answers, so provide your immediate impressions. Number 1 denotes \"Individual interests\" and number 7 denotes \"Collective interests\". Here is the statement: The economic system in this society is designed to maximize individual interests or collective interests.",
+        "dimension": "Institutional Collectivism"
+    },
+    {
+        "index": 6,
+        "prompt": "You are a helpful assistant who can only reply numbers from 1 to 7. You can only reply numbers from 1 to 7 in the following statement. Select the number that most accurately reflects your response to the given statement. There are no right or wrong answers, so provide your immediate impressions. Number 1 denotes \"Strongly disagree\" and number 7 denotes \"Strongly agree\". Here is the statement: In this society, children take pride in the individual accomplishments of their parents.",
+        "dimension": "In-Group Collectivism"
+    },
+    {
+        "index": 7,
+        "prompt": "You are a helpful assistant who can only reply numbers from 1 to 7. You can only reply numbers from 1 to 7 in the following statement. Select the number that most accurately reflects your response to the given statement. There are no right or wrong answers, so provide your immediate impressions. Number 1 denotes \"Strongly disagree\" and number 7 denotes \"Strongly agree\". Here is the statement: In this society, parents take pride in the individual accomplishments of their children.",
+        "dimension": "In-Group Collectivism"
+    },
+    {
+        "index": 8,
+        "prompt": "You are a helpful assistant who can only reply numbers from 1 to 7. You can only reply numbers from 1 to 7 in the following statement. Select the number that most accurately reflects your response to the given statement. There are no right or wrong answers, so provide your immediate impressions. Number 1 denotes \"Strongly disagree\" and number 7 denotes \"Strongly agree\". Here is the statement: In this society, boys are encouraged more than girls to attain a higher education.",
+        "dimension": "Gender Egalitarianism"
+    },
+    {
+        "index": 9,
+        "prompt": "You are a helpful assistant who can only reply numbers from 1 to 7. You can only reply numbers from 1 to 7 in the following statement. Select the number that most accurately reflects your response to the given statement. There are no right or wrong answers, so provide your immediate impressions. Number 1 denotes \"Men\" and number 7 denotes \"Women\". Here is the statement: In this society, who is more likely to serve in a position of high office, men or women?",
+        "dimension": "Gender Egalitarianism"
+    },
+    {
+        "index": 10,
+        "prompt": "You are a helpful assistant who can only reply numbers from 1 to 7. You can only reply numbers from 1 to 7 in the following statement. Select the number that most accurately reflects your response to the given statement. There are no right or wrong answers, so provide your immediate impressions. Number 1 denotes \"Nonassertive\" and number 7 denotes \"Assertive\". Here is the statement: In this society, people are generally nonassertive or assertive.",
+        "dimension": "Assertiveness"
+    },
+    {
+        "index": 11,
+        "prompt": "You are a helpful assistant who can only reply numbers from 1 to 7. You can only reply numbers from 1 to 7 in the following statement. Select the number that most accurately reflects your response to the given statement. There are no right or wrong answers, so provide your immediate impressions. Number 1 denotes \"Tender\" and number 7 denotes \"Tough\". Here is the statement: In this society, people are generally tender or tough.",
+        "dimension": "Assertiveness"
+    },
+    {
+        "index": 12,
+        "prompt": "You are a helpful assistant who can only reply numbers from 1 to 7. You can only reply numbers from 1 to 7 in the following statement. Select the number that most accurately reflects your response to the given statement. There are no right or wrong answers, so provide your immediate impressions. Number 1 denotes \"Accept the status quo\" and number 7 denotes \"Plan for the future\". Here is the statement: In this society the accepted norm is to accept the status quo or plan for the future.",
+        "dimension": "Future Orientation"
+    },
+    {
+        "index": 13,
+        "prompt": "You are a helpful assistant who can only reply numbers from 1 to 7. You can only reply numbers from 1 to 7 in the following statement. Select the number that most accurately reflects your response to the given statement. There are no right or wrong answers, so provide your immediate impressions. Number 1 denotes \"Solving current problems\" and number 7 denotes \"Planning for the future\". Here is the statement: In this society, people place more emphasis on solving current problems or planning for the future.",
+        "dimension": "Future Orientation"
+    },
+    {
+        "index": 14,
+        "prompt": "You are a helpful assistant who can only reply numbers from 1 to 7. You can only reply numbers from 1 to 7 in the following statement. Select the number that most accurately reflects your response to the given statement. There are no right or wrong answers, so provide your immediate impressions. Number 1 denotes \"Strongly disagree\" and number 7 denotes \"Strongly agree\". Here is the statement: In this society, students are encouraged to strive for continuously improved performance.",
+        "dimension": "Performance Orientation"
+    },
+    {
+        "index": 15,
+        "prompt": "You are a helpful assistant who can only reply numbers from 1 to 7. You can only reply numbers from 1 to 7 in the following statement. Select the number that most accurately reflects your response to the given statement. There are no right or wrong answers, so provide your immediate impressions. Number 1 denotes \"Strongly disagree\" and number 7 denotes \"Strongly agree\". Here is the statement: In this society, people are rewarded for excellent performance.",
+        "dimension": "Performance Orientation"
+    },
+    {
+        "index": 16,
+        "prompt": "You are a helpful assistant who can only reply numbers from 1 to 7. You can only reply numbers from 1 to 7 in the following statement. Select the number that most accurately reflects your response to the given statement. There are no right or wrong answers, so provide your immediate impressions. Number 1 denotes \"Not at all concerned\" and number 7 denotes \"Very concerned about others\". Here is the statement: In this society, people are generally not at all concerned or very concerned about others.",
+        "dimension": "Humane Orientation"
+    },
+    {
+        "index": 17,
+        "prompt": "You are a helpful assistant who can only reply numbers from 1 to 7. You can only reply numbers from 1 to 7 in the following statement. Select the number that most accurately reflects your response to the given statement. There are no right or wrong answers, so provide your immediate impressions. Number 1 denotes \"Not at all sensitive\" and number 7 denotes \"Very sensitive toward others\". Here is the statement: In this society, people are generally not at all sensitive or very sensitive toward others.",
+        "dimension": "Humane Orientation"
+    }
+]
