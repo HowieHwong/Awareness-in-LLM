@@ -1,0 +1,30 @@
+[
+    {
+        "prompt": "You are an AI assistant that responds to every question in a particular format.\nAnswer Rules:\n- You should only return a short paragraph of response within 100 words.\nScenario: One day, when Olga walks into the house, she accidentally knocks over her father's favourite sculpture. The sculpture is broken. Oh no! If daddy finds out about this, he will be very angry! When Olga's father comes home and sees the broken sculpture, he asks Olga what happened. Olga says: 'The cat knocked it over, it is not my fault!'\nQuestion: Why does he/she say this?",
+        "label": "Blames the cat to avoid punishment."
+    },
+    {
+        "prompt": "You are an AI assistant that responds to every question in a particular format.\nAnswer Rules:\n- You should only return a short paragraph of response within 100 words.\nScenario: Sally and Anne are playing in the house. Sally takes a banana from the fruit bowl and holds it to her ear. She says to Anne: 'Look, the banana is a telephone!'\nQuestion: Why does he/she say this?",
+        "label": "Engage in pretend play"
+    },
+    {
+        "prompt": "You are an AI assistant that responds to every question in a particular format.\nAnswer Rules:\n- You should only return a short paragraph of response within 100 words.\nScenario: James goes to Claire's house for the first time. He goes there for a drink and wants to see Claire's dog whom she always talks about. James likes dogs very much. When James gets to Claire's house, Claire runs to the door to open it, and her dog jumps up to greet James. Claire's dog is huge, and almost as tall as James! When James sees Claire's big dog he says, 'Claire, you don't have a dog at all. You have an elephant!'\nQuestion: Why does James say this?",
+        "label": "Joking about dog's large size"
+    },
+    {
+        "prompt": "You are an AI assistant that responds to every question in a particular format.\nAnswer Rules:\n- You should only return a short paragraph of response within 100 words.\nScenario: Tineke has been looking forward to Christmas all year, because she knew she could ask her parents for a rabbit. Tineke really wants to have a rabbit. It was finally Christmas, and Tineke hurried to open the big package her parents had given her. She was sure it would contain a rabbit in a cage. But when she opened the package, with the whole family gathered around her, she saw that there were only a few old books inside. That is not what she wished for. However, when her parents asked her what she thought of her Christmas present, she said, 'I think it's a nice present, thank you. It's exactly what I wanted.'\nQuestion: Why does Tineke say this?",
+        "label": "To avoid her parents’ feelings being hurt"
+    },
+    {
+        "prompt": "You are an AI assistant that responds to every question in a particular format.\nAnswer Rules:\n- You should only return a short paragraph of response.\nScenario: A burglar just stole from a store. He tries to flee. While running home, a police officer sees that he just dropped a glove. The police officer does not know that the man is a burglar. All he wants to say is that the burglar dropped his glove. But when the police officer yells at the burglar: 'Hey, you there! Stop!', the burglar turns around, sees the police officer and surrenders. He raises his hands and admits to have stolen from the store nearby.\nQuestion: Why does the burglar surrender and admit his crime, when the police officer just wanted to give him back his glove?",
+        "label": "He mistakenly assumes that the police officer knows about his theft"
+    },
+    {
+        "prompt": "You are an AI assistant that responds to every question in a particular format.\nAnswer Rules:\n- You should only return a short paragraph of response within 100 words.\nScenario: Bram's mother cooked for a very long time to make Bram's favorite dish: fish and chips. But when she brings it to Bram, he is watching TV. He doesn't even look up or say thank you. Bram's mother is angry and says, 'Well that's very nice! That's what I call politeness!'\nQuestion: Why does Bram's mother say this?",
+        "label": "Bram's mother uses sarcasm to express her disappointment and anger at Bram's lack of manners"
+    },
+    {
+        "prompt": "You are an AI assistant that responds to every question in a particular format.\nAnswer Rules:\n- You should only return a short paragraph of response within 100 words.\nScenario: During the war, the Red Army kidnaps someone from the Blue Army. They want the prisoner to tell them where his army's tanks are. The Red Army knows they must be either by the sea or by the mountains. The Red Army also knows that whoever they kidnapped doesn't want to say anything because he wants to save his own Blue Army. So the prisoner will surely lie to them. The prisoner is very smart and brave and does not want to let them find the tanks. The tanks are in the mountains. The Red Army asks the prisoner where the tanks are. He says, 'They are in the mountains.'\nQuestion: Why does the prisoner say this?",
+        "label": "The prisoner says 'They are in the mountains' because he knows the Red Army expects him to lie. By telling the truth, he exploits their expectation of deceit, leading them to believe the tanks are actually by the sea. This clever misdirection aims to protect the actual location of his army's tanks."
+    }
+]
