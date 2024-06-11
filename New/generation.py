@@ -31,9 +31,11 @@ openai_api = config.openai_api
 deepinfra_api = config.deepinfra_api
 zhipu_api = config.zhipu_api
 
-Emotion_File = ['EmoBench_EU_Shuffled_Fixed_1.json', 'EmoBench_EU_Shuffled_Fixed_2.json', 'EmoBench_EU_Shuffled_Fixed_3.json']
-Personality_File = ['big_five_new_3.json']
-Culture_File = ['culture_orientation.json']
+Personality_File = ['big_five.json', 'dark_traits.json']
+Emotion_File = ['EmoBench_EU.json', 'EmoBench_EA.json', 'EmoBench_EU_Shuffled_Fixed_1.json', 'EmoBench_EU_Shuffled_Fixed_2.json', 'EmoBench_EU_Shuffled_Fixed_3.json', "Shuffled_Version_1_EmoBench_EA.json", 'Shuffled_Version_2_EmoBench_EA.json', 'Shuffled_Version_3_EmoBench_EA.json']
+ToM_File = ['false_belief/tom_UCT(parallel).json', 'false_belief/tom_UCT(position_bias).json', 'false_belief/tom_UCT.json', 'false_belief/tom_UTT.json', 'false_belief/tom_UTT(parallel).json', 'false_belief/tom_UTT(position_bias).json', 'imposing_memory/imposing_story.json', 'imposing_memory/imposing_story(parallel).json', 'strange_stories/strange_stories.json']
+Value_File = ['culture_orientation.json', 'human-centered_values/human-centered_value.json']
+
 
 @retry(wait=wait_random_exponential(min=1, max=10), stop=stop_after_attempt(6))
 def get_res(string, model, temperature=0.5):
@@ -113,18 +115,24 @@ def zhipu_res(string, model, temperature=0.5):
 
 
 def process_prompt(el, model):
-    if model in ['chatgpt', 'gpt-4']:
-        el['res'] = get_res(el['prompt'], model)
-    elif model in ['llama3-8b', 'llama3-70b', 'mistral-7b', 'mixtral', 'mixtral-large']:
-        el['res'] = deepinfra_res(el['prompt'], model)
-    elif model in ['glm4']:
-        el['res'] = zhipu_res(el['prompt'], model)
-    elif model in ['qwen-turbo']:
-        el['res'] = qwen_res(el['prompt'])
+    if 'prompt' in el:
+        if model in ['chatgpt', 'gpt-4']:
+            el['res'] = get_res(el['prompt'], model)
+        elif model in ['llama3-8b', 'llama3-70b', 'mistral-7b', 'mixtral', 'mixtral-large']:
+            el['res'] = deepinfra_res(el['prompt'], model)
+        elif model in ['glm4']:
+            el['res'] = zhipu_res(el['prompt'], model)
+        elif model in ['qwen-turbo']:
+            el['res'] = qwen_res(el['prompt'])
+        else:
+            raise ValueError('No model')
     else:
-        raise ValueError('No model')
+        if 'prompt1' in el and 'prompt2' in el:
+            el['res1'] = get_res(el['prompt1'], model) 
+            el['res2'] = get_res(el['prompt2'], model) 
+        else:
+            raise KeyError('Both prompt1 and prompt2 must be provided')
     return el
-
 
 def process_file(eval_type, file, model):
     if not os.path.exists(os.path.join('result', model)):
@@ -162,11 +170,11 @@ def process_file(eval_type, file, model):
 
 
 def run_task(eval_type, file_list, model):
-    assert eval_type in ['emotion', 'personality', 'value', 'culture']
+    assert eval_type in ['emotion', 'personality', 'value', 'culture', ]
     for file in file_list:
         process_file(eval_type, file, model)
 
-
+# Example execution
 model_list = ['gpt-4', 'llama3-8b', 'llama3-70b', 'mixtral', 'mistral-7b', 'mixtral-large', 'glm4', 'qwen-turbo', 'chatgpt']
 for model in model_list:
     run_task('personality', Personality_File, model)
